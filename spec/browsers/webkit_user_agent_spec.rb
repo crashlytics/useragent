@@ -662,7 +662,7 @@ describe "UserAgent: Mozilla/5.0 (iPad; U; CPU OS 3_2 like Mac OS X; en-us) Appl
   end
 
   it "should return 'CPU like Mac OS X' as its os" do
-    @useragent.os.should == "CPU OS 3_2 like Mac OS X"
+    @useragent.os.should == "iOS 3_2"
   end
 
   it "should return 'en-us' as its localization" do
@@ -696,7 +696,7 @@ describe "UserAgent: 'Mozilla/5.0 (iPhone; U; CPU iPhone OS 3_1_3 like Mac OS X;
   end
 
   it "should return 'CPU like Mac OS X' as its os" do
-    @useragent.os.should == "CPU iPhone OS 3_1_3 like Mac OS X"
+    @useragent.os.should == "iOS 3_1_3"
   end
 
   it "should return 'en-us' as its localization" do
