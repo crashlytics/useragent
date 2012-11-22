@@ -14,8 +14,21 @@ class UserAgent
       "Windows CE"      => "Windows CE"
     }.freeze
 
-    def self.normalize_os(os)
-      Windows[os] || os
+    class << self
+      def normalize_os(os)
+        Windows[os] || detect_ios(os) || os
+      end
+
+      private
+
+      def detect_ios(os)
+        if os =~ /like Mac OS X/
+          return 'iOS'
+        end
+
+        nil
+      end
     end
+
   end
 end

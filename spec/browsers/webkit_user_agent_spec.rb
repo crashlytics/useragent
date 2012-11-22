@@ -593,8 +593,8 @@ describe "UserAgent: 'Mozilla/5.0 (iPhone; U; CPU like Mac OS X; en) AppleWebKit
     @useragent.platform.should == "iPhone"
   end
 
-  it "should return 'CPU like Mac OS X' as its os" do
-    @useragent.os.should == "CPU like Mac OS X"
+  it "should return 'iOS' as its os" do
+    @useragent.os.should == "iOS"
   end
 
   it "should return 'en' as its localization" do
@@ -627,8 +627,8 @@ describe "UserAgent: 'Mozilla/5.0 (iPod; U; CPU like Mac OS X; en) AppleWebKit/4
     @useragent.platform.should == "iPod"
   end
 
-  it "should return 'CPU like Mac OS X' as its os" do
-    @useragent.os.should == "CPU like Mac OS X"
+  it "should return 'iOS' as its os" do
+    @useragent.os.should == "iOS"
   end
 
   it "should return 'en' as its localization" do
@@ -661,8 +661,8 @@ describe "UserAgent: Mozilla/5.0 (iPad; U; CPU OS 3_2 like Mac OS X; en-us) Appl
     @useragent.platform.should == "iPad"
   end
 
-  it "should return 'CPU like Mac OS X' as its os" do
-    @useragent.os.should == "iOS 3_2"
+  it "should return 'iOS' as its os" do
+    @useragent.os.should == "iOS"
   end
 
   it "should return 'en-us' as its localization" do
@@ -695,8 +695,8 @@ describe "UserAgent: 'Mozilla/5.0 (iPhone; U; CPU iPhone OS 3_1_3 like Mac OS X;
     @useragent.platform.should == "iPhone"
   end
 
-  it "should return 'CPU like Mac OS X' as its os" do
-    @useragent.os.should == "iOS 3_1_3"
+  it "should return 'iOS' as its os" do
+    @useragent.os.should == "iOS"
   end
 
   it "should return 'en-us' as its localization" do
@@ -727,8 +727,8 @@ describe "UserAgent: 'Mozilla/5.0 (iPod; U; CPU iPhone OS 3_1_3 like Mac OS X; e
     @useragent.platform.should == "iPod"
   end
 
-  it "should return 'CPU like Mac OS X' as its os" do
-    @useragent.os.should == "CPU iPhone OS 3_1_3 like Mac OS X"
+  it "should return 'iOS' as its os" do
+    @useragent.os.should == "iOS"
   end
 
   it "should return 'en' as its localization" do
@@ -795,8 +795,8 @@ describe "UserAgent: 'Mozilla/5.0 (iPhone; U; CPU iPhone OS 4_1 like Mac OS X; e
     @useragent.platform.should == "iPhone"
   end
 
-  it "should return 'CPU iPhone OS 4_1 like Mac OS X'" do
-    @useragent.os.should == "CPU iPhone OS 4_1 like Mac OS X"
+  it "should return 'iOS'" do
+    @useragent.os.should == "iOS"
   end
 
   it "should return 'en' as its localization" do
@@ -829,8 +829,8 @@ describe "UserAgent: 'Mozilla/5.0 (iPhone; U; CPU iPhone OS 4_0_1 like Mac OS X;
     @useragent.platform.should == "iPhone"
   end
 
-  it "should return 'CPU iPhone OS 4_0_1 like Mac OS X'" do
-    @useragent.os.should == "CPU iPhone OS 4_0_1 like Mac OS X"
+  it "should return 'iOS'" do
+    @useragent.os.should == "iOS"
   end
 
   it "should return 'en' as its localization" do
@@ -863,8 +863,8 @@ describe "UserAgent: 'Mozilla/5.0 (iPhone Simulator; U; CPU iPhone OS 4_0_1 like
     @useragent.platform.should == "iPhone Simulator"
   end
 
-  it "should return 'CPU iPhone OS 4_0_1 like Mac OS X'" do
-    @useragent.os.should == "CPU iPhone OS 4_0_1 like Mac OS X"
+  it "should return 'iOS'" do
+    @useragent.os.should == "iOS"
   end
 
   it "should return 'en' as its localization" do
