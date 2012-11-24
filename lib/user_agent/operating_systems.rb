@@ -22,8 +22,12 @@ class UserAgent
       private
 
       def detect_ios(os)
+        /CPU (?:iPhone |iPod )?OS ([\d_.]+)/.match(os) do |m|
+          return 'iOS %s' % m[1].gsub('_','.')
+        end
+
         if os =~ /like Mac OS X/
-          return 'iOS'
+          return 'iOS 3.0'
         end
 
         nil
