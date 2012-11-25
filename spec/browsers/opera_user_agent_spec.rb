@@ -25,8 +25,8 @@ describe "UserAgent: 'Opera/9.27 (Macintosh; Intel Mac OS X; U; en)'" do
     @useragent.platform.should == "Macintosh"
   end
 
-  it "should return 'Intel Mac OS X' as its os" do
-    @useragent.os.should == "Intel Mac OS X"
+  it "should return 'OSX' as its os" do
+    @useragent.os.should == "OSX"
   end
 
   it "should return 'en' as its localization" do
@@ -97,8 +97,8 @@ describe "UserAgent: 'Opera/9.80 (Macintosh; Intel Mac OS X; U; en) Presto/2.2.1
     @useragent.platform.should == "Macintosh"
   end
 
-  it "should return 'Intel Mac OS X' as its os" do
-    @useragent.os.should == "Intel Mac OS X"
+  it "should return 'OSX' as its os" do
+    @useragent.os.should == "OSX"
   end
 
   it "should return 'en' as its localization" do

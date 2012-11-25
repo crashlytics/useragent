@@ -16,7 +16,7 @@ class UserAgent
 
     class << self
       def normalize_os(os)
-        Windows[os] || detect_ios(os) || os
+        Windows[os] || detect_ios(os) || simplify_osx(os) || os
       end
 
       private
@@ -28,6 +28,18 @@ class UserAgent
 
         if os =~ /like Mac OS X/
           return 'iOS 3.0'
+        end
+
+        nil
+      end
+
+      def simplify_osx(os)
+        /Mac OS X ([\d_.]+)/.match(os) do |m|
+          return "OSX %s" % m[1].gsub('_','.')
+        end
+
+        if os =~ /Mac OS X/
+          return 'OSX'
         end
 
         nil
