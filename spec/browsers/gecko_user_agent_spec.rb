@@ -13,6 +13,36 @@ shared_examples_for "Firefox browser" do
 
 end
 
+describe 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:16.0) Gecko/20100101 Firefox/16.0' do
+  before do
+    @useragent = UserAgent.parse('Mozilla/5.0 (Windows NT 6.1; WOW64; rv:16.0) Gecko/20100101 Firefox/16.0')
+  end
+
+  it_should_behave_like "Firefox browser"
+
+  it "should return '16.0' as its version" do
+    @useragent.version.should == "16.0"
+  end
+
+  it "should return '20100101' as its gecko version" do
+    @useragent.gecko.version.should == "20100101"
+  end
+
+  it "should return 'Windows' as its platform" do
+    @useragent.platform.should == "Windows"
+  end
+
+  it "should return 'Windows XP' as its os" do
+    @useragent.os.should == "Windows 7"
+  end
+
+  it "should return nil as its localization" do
+    @useragent.localization.should be_nil
+  end
+
+  it { @useragent.should_not be_mobile }
+end
+
 describe 'Mozilla/5.0 (Windows NT 5.1; rv:16.0) Gecko/20100101 Firefox/16.0' do
   before do
     @useragent = UserAgent.parse('Mozilla/5.0 (Windows NT 5.1; rv:16.0) Gecko/20100101 Firefox/16.0')
