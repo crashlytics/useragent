@@ -10,10 +10,10 @@ class UserAgent
       end
 
       def browser
-        if os =~ /Android/
-          'Android'
-        elsif detect_product('Chrome')
+        if detect_product('Chrome')
           'Chrome'
+        elsif os =~ /Android/
+          'Android'
         elsif platform == 'webOS' || platform == 'BlackBerry'  || platform == 'Symbian'
           platform
         else
@@ -80,6 +80,8 @@ class UserAgent
       def platform
         if application.nil?
           nil
+        elsif application.comment.join =~ /Android/
+          'Android'
         elsif application.comment[0] =~ /Symbian/
           'Symbian'
         elsif application.comment[0] =~ /webOS/
@@ -104,6 +106,12 @@ class UserAgent
           "Palm #{last.product} #{last.version}"
         elsif platform == 'Symbian'
           application.comment[0]
+        elsif platform == 'Android'
+          if application.comment.join =~ /(Android [\d.]+)/
+            $1
+          else
+            platform
+          end
         elsif application
           if application.comment[0] =~ /Windows NT/
             OperatingSystems.normalize_os(application.comment[0])

@@ -1173,8 +1173,8 @@ describe "UserAgent: 'Mozilla/5.0 (Linux; U; Android 1.5; de-; HTC Magic Build/P
     @useragent.webkit.version.should == "528.5+"
   end
 
-  it "should return 'Linux' as its platform" do
-    @useragent.platform.should == "Linux"
+  it "should return 'Android' as its platform" do
+    @useragent.platform.should == "Android"
   end
 
   it "should return 'Android 1.5' as its os" do
@@ -1189,8 +1189,8 @@ describe "UserAgent: 'Mozilla/5.0 (Linux; U; Android 2.1-update1; en-us; Nexus O
     @useragent = UserAgent.parse("Mozilla/5.0 (Linux; U; Android 2.1-update1; en-us; Nexus One Build/ERE27) AppleWebKit/530.17 (KHTML, like Gecko) Version/4.0 Mobile Safari/530.17 Chrome/4.1.249.1025")
   end
 
-  it "should return 'Android' as its browser" do
-    @useragent.browser.should == "Android"
+  it "should return 'Chrome' as its browser" do
+    @useragent.browser.should == "Chrome"
   end
 
   it "should return '530.17' as its build" do
@@ -1205,12 +1205,44 @@ describe "UserAgent: 'Mozilla/5.0 (Linux; U; Android 2.1-update1; en-us; Nexus O
     @useragent.webkit.version.should == "530.17"
   end
 
-  it "should return 'Linux' as its platform" do
-    @useragent.platform.should == "Linux"
+  it "should return 'Android' as its platform" do
+    @useragent.platform.should == "Android"
   end
 
-  it "should return 'Android 2.1-update1' as its os" do
-    @useragent.os.should == "Android 2.1-update1"
+  it "should return 'Android 2.1' as its os" do
+    @useragent.os.should == "Android 2.1"
+  end
+
+  it { @useragent.should be_mobile }
+end
+
+describe "Mozilla/5.0 (Linux; Android 4.1.1; Galaxy Nexus Build/JRO03O) AppleWebKit/535.19 (KHTML, like Gecko) Chrome/18.0.1025.166 Mobile Safari/535.19" do
+  before do
+    @useragent = UserAgent.parse("Mozilla/5.0 (Linux; Android 4.1.1; Galaxy Nexus Build/JRO03O) AppleWebKit/535.19 (KHTML, like Gecko) Chrome/18.0.1025.166 Mobile Safari/535.19")
+  end
+
+  it "should return 'Chrome' as its browser" do
+    @useragent.browser.should == "Chrome"
+  end
+
+  it "should return '535.19' as its build" do
+    @useragent.build.should == "535.19"
+  end
+
+  it "should return '18.0.1025.166' as its version" do
+    @useragent.version.should == "18.0.1025.166"
+  end
+
+  it "should return '535.19' as its webkit version" do
+    @useragent.webkit.version.should == "535.19"
+  end
+
+  it "should return 'Android' as its platform" do
+    @useragent.platform.should == "Android"
+  end
+
+  it "should return 'Android 4.1.1' as its os" do
+    @useragent.os.should == "Android 4.1.1"
   end
 
   it { @useragent.should be_mobile }
