@@ -9,6 +9,10 @@ class UserAgent
         true
       end
 
+      def products
+        map {|ua| ua.product}
+      end
+
       def browser
         if detect_product('Chrome')
           'Chrome'
@@ -16,6 +20,8 @@ class UserAgent
           'Android'
         elsif platform == 'webOS' || platform == 'BlackBerry'  || platform == 'Symbian'
           platform
+        elsif products.include? 'Mobile'
+          mobile_browser
         else
           'Safari'
         end
@@ -23,6 +29,14 @@ class UserAgent
 
       def build
         webkit.version
+      end
+
+      def mobile_browser
+        case products
+        when ['Mozilla', 'AppleWebKit', 'Version', 'Mobile', 'Safari'] then 'Safari'
+        when ['Mozilla', 'AppleWebKit', 'CriOS', 'Mobile', 'Safari'] then 'Chrome'
+        else 'UIWebView'
+        end
       end
 
       BuildVersions = {
