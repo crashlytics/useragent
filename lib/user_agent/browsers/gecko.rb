@@ -21,8 +21,14 @@ class UserAgent
       end
 
       def platform
-        if comment = application.comment
-          comment[0] == 'compatible' ? nil : comment[0]
+        if application.nil? || application.comment.nil?
+          nil
+        elsif application.comment[0] == 'compatible'
+          nil
+        elsif application.comment[0] =~ /Windows/
+          'Windows'
+        else
+          application.comment[0]
         end
       end
 
@@ -31,9 +37,14 @@ class UserAgent
       end
 
       def os
-        if comment = application.comment
-          i = comment[1] == 'U' ? 2 : 1
-          OperatingSystems.normalize_os(comment[i])
+        if application.nil? || application.comment.nil?
+          nil
+        elsif application.comment[0] =~ /Windows NT/
+          OperatingSystems.normalize_os(application.comment[0])
+        elsif application.comment[1] == 'U'
+          OperatingSystems.normalize_os(application.comment[2])
+        else
+          OperatingSystems.normalize_os(application.comment[1])
         end
       end
 
