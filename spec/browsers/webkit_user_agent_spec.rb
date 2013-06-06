@@ -811,7 +811,15 @@ describe "UserAgent: 'Mozilla/5.0 (iPhone; U; CPU iPhone OS 4_0_1 like Mac OS X;
     @useragent = UserAgent.parse("Mozilla/5.0 (iPhone; U; CPU iPhone OS 4_0_1 like Mac OS X; en-us) AppleWebKit/532.9 (KHTML, like Gecko) Mobile/8A306")
   end
 
-  it_should_behave_like "Safari browser"
+  it "should return 'UIWebView' as its browser" do
+    @useragent.browser.should == "UIWebView"
+  end
+
+  it "should return :strong as its security" do
+    @useragent.security.should == :strong
+  end
+
+  it { @useragent.should be_webkit }
 
   it "should return '532.9' as its build" do
     @useragent.build.should == "532.9"
