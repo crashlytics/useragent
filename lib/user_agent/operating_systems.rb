@@ -14,8 +14,37 @@ class UserAgent
       "Windows CE"      => "Windows CE"
     }.freeze
 
-    def self.normalize_os(os)
-      Windows[os] || os
+    class << self
+      def normalize_os(os)
+        Windows[os] || detect_ios(os) || simplify_osx(os) || os
+      end
+
+      private
+
+      def detect_ios(os)
+        /CPU (?:iPhone |iPod )?OS ([\d_.]+)/.match(os) do |m|
+          return 'iOS %s' % m[1].gsub('_','.')
+        end
+
+        if os =~ /like Mac OS X/
+          return 'iOS 3.0'
+        end
+
+        nil
+      end
+
+      def simplify_osx(os)
+        /Mac OS X ([\d_.]+)/.match(os) do |m|
+          return "OSX %s" % m[1].gsub('_','.')
+        end
+
+        if os =~ /Mac OS X/
+          return 'OSX'
+        end
+
+        nil
+      end
     end
+
   end
 end

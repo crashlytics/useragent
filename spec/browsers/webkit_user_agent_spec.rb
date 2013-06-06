@@ -35,8 +35,8 @@ describe "UserAgent: Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10_6_3; en-us) Ap
     @useragent.platform.should == "Macintosh"
   end
 
-  it "should return 'Intel Mac OS X 10_6_3' as its os" do
-    @useragent.os.should == "Intel Mac OS X 10_6_3"
+  it "should return 'OSX 10.6.3' as its os" do
+    @useragent.os.should == "OSX 10.6.3"
   end
 
   it "should return 'en-us' as its localization" do
@@ -69,8 +69,8 @@ describe "UserAgent: 'Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10_5_3; en-us) A
     @useragent.platform.should == "Macintosh"
   end
 
-  it "should return 'Intel Mac OS X 10_5_3' as its os" do
-    @useragent.os.should == "Intel Mac OS X 10_5_3"
+  it "should return 'OSX 10.5.3' as its os" do
+    @useragent.os.should == "OSX 10.5.3"
   end
 
   it "should return 'en-us' as its localization" do
@@ -137,8 +137,8 @@ describe "UserAgent: 'Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10_5_3; en-us) A
     @useragent.platform.should == "Macintosh"
   end
 
-  it "should return 'Intel Mac OS X 10_5_3' as its os" do
-    @useragent.os.should == "Intel Mac OS X 10_5_3"
+  it "should return 'OSX 10.5.3' as its os" do
+    @useragent.os.should == "OSX 10.5.3"
   end
 
   it "should return 'en-us' as its localization" do
@@ -241,8 +241,8 @@ describe "UserAgent: 'Mozilla/5.0 (Macintosh; U; Intel Mac OS X; en) AppleWebKit
     @useragent.platform.should == "Macintosh"
   end
 
-  it "should return 'Intel Mac OS X' as its os" do
-    @useragent.os.should == "Intel Mac OS X"
+  it "should return 'OSX' as its os" do
+    @useragent.os.should == "OSX"
   end
 
   it "should return 'en' as its localization" do
@@ -273,8 +273,8 @@ describe "UserAgent: 'Mozilla/5.0 (Macintosh; U; PPC Mac OS X; en-us) AppleWebKi
     @useragent.platform.should == "Macintosh"
   end
 
-  it "should return 'Intel Mac OS X' as its os" do
-    @useragent.os.should == "PPC Mac OS X"
+  it "should return 'OSX' as its os" do
+    @useragent.os.should == "OSX"
   end
 
   it "should return 'en' as its localization" do
@@ -305,8 +305,8 @@ describe "UserAgent: 'Mozilla/5.0 (Macintosh; U; PPC Mac OS X; en) AppleWebKit/4
     @useragent.platform.should == "Macintosh"
   end
 
-  it "should return 'Intel Mac OS X' as its os" do
-    @useragent.os.should == "PPC Mac OS X"
+  it "should return 'OSX' as its os" do
+    @useragent.os.should == "OSX"
   end
 
   it "should return 'en' as its localization" do
@@ -337,8 +337,8 @@ describe "UserAgent: 'Mozilla/5.0 (Macintosh; U; PPC Mac OS X; en) AppleWebKit/3
     @useragent.platform.should == "Macintosh"
   end
 
-  it "should return 'PPC Mac OS X' as its os" do
-    @useragent.os.should == "PPC Mac OS X"
+  it "should return 'OSX' as its os" do
+    @useragent.os.should == "OSX"
   end
 
   it "should return 'en' as its localization" do
@@ -369,8 +369,8 @@ describe "UserAgent: 'Mozilla/5.0 (Macintosh; U; PPC Mac OS X; fr-ch) AppleWebKi
     @useragent.platform.should == "Macintosh"
   end
 
-  it "should return 'PPC Mac OS X' as its os" do
-    @useragent.os.should == "PPC Mac OS X"
+  it "should return 'OSX' as its os" do
+    @useragent.os.should == "OSX"
   end
 
   it "should return 'en' as its localization" do
@@ -401,8 +401,8 @@ describe "UserAgent: 'Mozilla/5.0 (Macintosh; U; PPC Mac OS X; es-es) AppleWebKi
     @useragent.platform.should == "Macintosh"
   end
 
-  it "should return 'PPC Mac OS X' as its os" do
-    @useragent.os.should == "PPC Mac OS X"
+  it "should return 'OSX' as its os" do
+    @useragent.os.should == "OSX"
   end
 
   it "should return 'en' as its localization" do
@@ -433,8 +433,8 @@ describe "UserAgent: 'Mozilla/5.0 (Macintosh; U; PPC Mac OS X; fr) AppleWebKit/3
     @useragent.platform.should == "Macintosh"
   end
 
-  it "should return 'PPC Mac OS X' as its os" do
-    @useragent.os.should == "PPC Mac OS X"
+  it "should return 'OSX' as its os" do
+    @useragent.os.should == "OSX"
   end
 
   it "should return 'en' as its localization" do
@@ -465,8 +465,8 @@ describe "UserAgent: 'Mozilla/5.0 (Macintosh; U; PPC Mac OS X; en-us) AppleWebKi
     @useragent.platform.should == "Macintosh"
   end
 
-  it "should return 'PPC Mac OS X' as its os" do
-    @useragent.os.should == "PPC Mac OS X"
+  it "should return 'OSX' as its os" do
+    @useragent.os.should == "OSX"
   end
 
   it "should return 'en' as its localization" do
@@ -497,8 +497,8 @@ describe "UserAgent: 'Mozilla/5.0 (Macintosh; U; PPC Mac OS X; en-us) AppleWebKi
     @useragent.platform.should == "Macintosh"
   end
 
-  it "should return 'PPC Mac OS X' as its os" do
-    @useragent.os.should == "PPC Mac OS X"
+  it "should return 'OSX' as its os" do
+    @useragent.os.should == "OSX"
   end
 
   it "should return 'en' as its localization" do
@@ -529,8 +529,8 @@ describe "UserAgent: 'Mozilla/5.0 (Macintosh; U; PPC Mac OS X; en) AppleWebKit/1
     @useragent.platform.should == "Macintosh"
   end
 
-  it "should return 'PPC Mac OS X' as its os" do
-    @useragent.os.should == "PPC Mac OS X"
+  it "should return 'OSX' as its os" do
+    @useragent.os.should == "OSX"
   end
 
   it "should return 'en' as its localization" do
@@ -561,8 +561,8 @@ describe "UserAgent: 'Mozilla/5.0 (Macintosh; U; PPC Mac OS X; fr-fr) AppleWebKi
     @useragent.platform.should == "Macintosh"
   end
 
-  it "should return 'PPC Mac OS X' as its os" do
-    @useragent.os.should == "PPC Mac OS X"
+  it "should return 'OSX' as its os" do
+    @useragent.os.should == "OSX"
   end
 
   it "should return 'en' as its localization" do
@@ -593,8 +593,8 @@ describe "UserAgent: 'Mozilla/5.0 (iPhone; U; CPU like Mac OS X; en) AppleWebKit
     @useragent.platform.should == "iPhone"
   end
 
-  it "should return 'CPU like Mac OS X' as its os" do
-    @useragent.os.should == "CPU like Mac OS X"
+  it "should return 'iOS 3.0' as its os" do
+    @useragent.os.should == "iOS 3.0"
   end
 
   it "should return 'en' as its localization" do
@@ -627,8 +627,8 @@ describe "UserAgent: 'Mozilla/5.0 (iPod; U; CPU like Mac OS X; en) AppleWebKit/4
     @useragent.platform.should == "iPod"
   end
 
-  it "should return 'CPU like Mac OS X' as its os" do
-    @useragent.os.should == "CPU like Mac OS X"
+  it "should return 'iOS 3.0' as its os" do
+    @useragent.os.should == "iOS 3.0"
   end
 
   it "should return 'en' as its localization" do
@@ -661,8 +661,8 @@ describe "UserAgent: Mozilla/5.0 (iPad; U; CPU OS 3_2 like Mac OS X; en-us) Appl
     @useragent.platform.should == "iPad"
   end
 
-  it "should return 'CPU like Mac OS X' as its os" do
-    @useragent.os.should == "CPU OS 3_2 like Mac OS X"
+  it "should return 'iOS 3.2' as its os" do
+    @useragent.os.should == "iOS 3.2"
   end
 
   it "should return 'en-us' as its localization" do
@@ -695,8 +695,8 @@ describe "UserAgent: 'Mozilla/5.0 (iPhone; U; CPU iPhone OS 3_1_3 like Mac OS X;
     @useragent.platform.should == "iPhone"
   end
 
-  it "should return 'CPU like Mac OS X' as its os" do
-    @useragent.os.should == "CPU iPhone OS 3_1_3 like Mac OS X"
+  it "should return 'iOS 3.1.3' as its os" do
+    @useragent.os.should == "iOS 3.1.3"
   end
 
   it "should return 'en-us' as its localization" do
@@ -727,8 +727,8 @@ describe "UserAgent: 'Mozilla/5.0 (iPod; U; CPU iPhone OS 3_1_3 like Mac OS X; e
     @useragent.platform.should == "iPod"
   end
 
-  it "should return 'CPU like Mac OS X' as its os" do
-    @useragent.os.should == "CPU iPhone OS 3_1_3 like Mac OS X"
+  it "should return 'iOS 3.1.3' as its os" do
+    @useragent.os.should == "iOS 3.1.3"
   end
 
   it "should return 'en' as its localization" do
@@ -761,8 +761,8 @@ describe "UserAgent: 'Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10_6_5; en-us) A
     @useragent.platform.should == "Macintosh"
   end
 
-  it "should return 'Intel Mac OS X 10_6_5' as its os" do
-    @useragent.os.should == "Intel Mac OS X 10_6_5"
+  it "should return 'OSX 10.6.5' as its os" do
+    @useragent.os.should == "OSX 10.6.5"
   end
 
   it "should return 'en' as its localization" do
@@ -795,8 +795,8 @@ describe "UserAgent: 'Mozilla/5.0 (iPhone; U; CPU iPhone OS 4_1 like Mac OS X; e
     @useragent.platform.should == "iPhone"
   end
 
-  it "should return 'CPU iPhone OS 4_1 like Mac OS X'" do
-    @useragent.os.should == "CPU iPhone OS 4_1 like Mac OS X"
+  it "should return 'iOS 4.1'" do
+    @useragent.os.should == "iOS 4.1"
   end
 
   it "should return 'en' as its localization" do
@@ -829,8 +829,8 @@ describe "UserAgent: 'Mozilla/5.0 (iPhone; U; CPU iPhone OS 4_0_1 like Mac OS X;
     @useragent.platform.should == "iPhone"
   end
 
-  it "should return 'CPU iPhone OS 4_0_1 like Mac OS X'" do
-    @useragent.os.should == "CPU iPhone OS 4_0_1 like Mac OS X"
+  it "should return 'iOS 4.0.1'" do
+    @useragent.os.should == "iOS 4.0.1"
   end
 
   it "should return 'en' as its localization" do
@@ -863,8 +863,8 @@ describe "UserAgent: 'Mozilla/5.0 (iPhone Simulator; U; CPU iPhone OS 4_0_1 like
     @useragent.platform.should == "iPhone Simulator"
   end
 
-  it "should return 'CPU iPhone OS 4_0_1 like Mac OS X'" do
-    @useragent.os.should == "CPU iPhone OS 4_0_1 like Mac OS X"
+  it "should return 'iOS 4.0.1'" do
+    @useragent.os.should == "iOS 4.0.1"
   end
 
   it "should return 'en' as its localization" do
@@ -1035,8 +1035,8 @@ describe "UserAgent: 'Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10_6_5; en-US) A
     @useragent.platform.should == "Macintosh"
   end
 
-  it "should return 'Intel Mac OS X 10_6_5' as its os" do
-    @useragent.os.should == "Intel Mac OS X 10_6_5"
+  it "should return 'OSX 10.6.5' as its os" do
+    @useragent.os.should == "OSX 10.6.5"
   end
 
   it "should return 'en-US' as its localization" do
@@ -1069,8 +1069,8 @@ describe "UserAgent: 'Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10_6_5; en-US) A
     @useragent.platform.should == "Macintosh"
   end
 
-  it "should return 'Intel Mac OS X 10_6_5' as its os" do
-    @useragent.os.should == "Intel Mac OS X 10_6_5"
+  it "should return 'OSX 10.6.5' as its os" do
+    @useragent.os.should == "OSX 10.6.5"
   end
 
   it "should return 'en-US' as its localization" do
@@ -1173,8 +1173,8 @@ describe "UserAgent: 'Mozilla/5.0 (Linux; U; Android 1.5; de-; HTC Magic Build/P
     @useragent.webkit.version.should == "528.5+"
   end
 
-  it "should return 'Linux' as its platform" do
-    @useragent.platform.should == "Linux"
+  it "should return 'Android' as its platform" do
+    @useragent.platform.should == "Android"
   end
 
   it "should return 'Android 1.5' as its os" do
@@ -1189,8 +1189,8 @@ describe "UserAgent: 'Mozilla/5.0 (Linux; U; Android 2.1-update1; en-us; Nexus O
     @useragent = UserAgent.parse("Mozilla/5.0 (Linux; U; Android 2.1-update1; en-us; Nexus One Build/ERE27) AppleWebKit/530.17 (KHTML, like Gecko) Version/4.0 Mobile Safari/530.17 Chrome/4.1.249.1025")
   end
 
-  it "should return 'Android' as its browser" do
-    @useragent.browser.should == "Android"
+  it "should return 'Chrome' as its browser" do
+    @useragent.browser.should == "Chrome"
   end
 
   it "should return '530.17' as its build" do
@@ -1205,12 +1205,44 @@ describe "UserAgent: 'Mozilla/5.0 (Linux; U; Android 2.1-update1; en-us; Nexus O
     @useragent.webkit.version.should == "530.17"
   end
 
-  it "should return 'Linux' as its platform" do
-    @useragent.platform.should == "Linux"
+  it "should return 'Android' as its platform" do
+    @useragent.platform.should == "Android"
   end
 
-  it "should return 'Android 2.1-update1' as its os" do
-    @useragent.os.should == "Android 2.1-update1"
+  it "should return 'Android 2.1' as its os" do
+    @useragent.os.should == "Android 2.1"
+  end
+
+  it { @useragent.should be_mobile }
+end
+
+describe "Mozilla/5.0 (Linux; Android 4.1.1; Galaxy Nexus Build/JRO03O) AppleWebKit/535.19 (KHTML, like Gecko) Chrome/18.0.1025.166 Mobile Safari/535.19" do
+  before do
+    @useragent = UserAgent.parse("Mozilla/5.0 (Linux; Android 4.1.1; Galaxy Nexus Build/JRO03O) AppleWebKit/535.19 (KHTML, like Gecko) Chrome/18.0.1025.166 Mobile Safari/535.19")
+  end
+
+  it "should return 'Chrome' as its browser" do
+    @useragent.browser.should == "Chrome"
+  end
+
+  it "should return '535.19' as its build" do
+    @useragent.build.should == "535.19"
+  end
+
+  it "should return '18.0.1025.166' as its version" do
+    @useragent.version.should == "18.0.1025.166"
+  end
+
+  it "should return '535.19' as its webkit version" do
+    @useragent.webkit.version.should == "535.19"
+  end
+
+  it "should return 'Android' as its platform" do
+    @useragent.platform.should == "Android"
+  end
+
+  it "should return 'Android 4.1.1' as its os" do
+    @useragent.os.should == "Android 4.1.1"
   end
 
   it { @useragent.should be_mobile }
@@ -1306,8 +1338,8 @@ describe "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_2) AppleWebKit/534.51.22 (
     @useragent.platform.should == "Macintosh"
   end
 
-  it "should return 'Intel Mac OS X 10_7_2' as its os" do
-    @useragent.os.should == "Intel Mac OS X 10_7_2"
+  it "should return 'OSX 10.7.2' as its os" do
+    @useragent.os.should == "OSX 10.7.2"
   end
 
   it "should return nil as its localization" do
