@@ -18,7 +18,7 @@ class UserAgent
           'Chrome'
         elsif os =~ /Android/
           'Android'
-        elsif platform == 'webOS' || platform == 'BlackBerry'  || platform == 'Symbian'
+        elsif platform == 'webOS' || platform == 'BlackBerry'  || platform == 'Symbian' || platform == 'BB10'
           platform
         elsif products.include? 'Mobile'
           mobile_browser
