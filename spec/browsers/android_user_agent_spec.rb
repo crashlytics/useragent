@@ -67,3 +67,16 @@ describe "UserAgent: 'Mozilla/5.0 (Linux; U; Android 2.3.6; en-us; MB860 Build/4
 
   it { @useragent.should be_mobile }
 end
+
+# Blackberry 10
+describe "UserAgent: 'Mozilla/5.0 (BB10; Touch) AppleWebKit/537.35+ (KHTML, like Gecko) Version/10.2.1.3175 Mobile Safari/537.35+'" do
+  before do
+    @useragent = UserAgent.parse('Mozilla/5.0 (BB10; Touch) AppleWebKit/537.35+ (KHTML, like Gecko) Version/10.2.1.3175 Mobile Safari/537.35+')
+  end
+
+  subject { @useragent }
+  its(:browser) { should == 'BB10' }
+  its(:mobile_browser) { should == 'Safari' }
+  its(:platform) { should == 'BB10' }
+  its(:mobile?) { should be_true }
+end
