@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name    = "useragent"
-  s.version = "0.4.15"
+  s.version = "0.4.16"
 
   s.homepage    = "http://github.com/josh/useragent"
   s.summary     = "HTTP User Agent parser"
@@ -26,7 +26,7 @@ Gem::Specification.new do |s|
 
   s.add_development_dependency "rake"
   s.add_development_dependency "rspec"
-  s.add_development_dependency "debugger"
+  s.add_development_dependency "byebug"
 
   s.author = "Joshua Peek"
   s.email  = "josh@joshpeek.com"

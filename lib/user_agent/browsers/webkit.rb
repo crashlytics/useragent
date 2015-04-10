@@ -129,7 +129,7 @@ class UserAgent
         elsif application
           if application.comment[0] =~ /Windows NT/
             OperatingSystems.normalize_os(application.comment[0])
-          elsif application.comment[2].nil?
+          elsif application.comment[2].nil? || application.comment[2].match(/^[a-zA-Z]{2}-[a-zA-Z]{2}$/)
             OperatingSystems.normalize_os(application.comment[1])
           else
             OperatingSystems.normalize_os(application.comment[2])
